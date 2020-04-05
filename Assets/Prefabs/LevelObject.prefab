@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 8140657981500485046}
   m_Layer: 0
   m_Name: LevelObject
-  m_TagString: Untagged
+  m_TagString: CherryTree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
