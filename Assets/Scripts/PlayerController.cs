@@ -191,7 +191,6 @@ public class PlayerController : MonoBehaviour
 
         AudioSource audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(throwClip);
-
         m_Animator.SetBool(throwState, false);
         ReturnToMoveState();
     }

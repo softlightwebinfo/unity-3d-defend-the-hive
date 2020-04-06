@@ -83,7 +83,6 @@ public class NewPlayerMotor : MonoBehaviour
         // read inputs
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         float v = CrossPlatformInputManager.GetAxis("Vertical");
-
         // calculate move direction to pass to character
         if (m_Cam != null)
         {
@@ -97,7 +96,7 @@ public class NewPlayerMotor : MonoBehaviour
             m_Move = v * Vector3.forward + h * Vector3.right;
         }
 
-
+        Move(m_Move);
         // pass all parameters to the character control script
         /*
         if (PlayerManager.hasDead == false)
