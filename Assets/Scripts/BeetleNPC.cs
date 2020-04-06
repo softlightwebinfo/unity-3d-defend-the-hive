@@ -80,6 +80,7 @@ public class BeetleNPC : MonoBehaviour
             BeetlePatrol.isAttacking = true;
             this.cherryHit = true;
             this.m_Animator.Play("Stand");
+            PointsManager.AddPoints(25);
         }
     }
     private void Update()
