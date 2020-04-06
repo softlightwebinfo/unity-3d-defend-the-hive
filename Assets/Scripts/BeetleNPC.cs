@@ -12,11 +12,12 @@ public class BeetleNPC : MonoBehaviour
     public bool hasReachedThePlayer = false;
     public float smoothTime = 3.0f;
     public Vector3 smoothVelocity = Vector3.zero;
-
+    public HealthManager healthManager;
     // Start is called before the first frame update
     void Start()
     {
         this.m_Animator = GetComponent<Animator>();
+        this.healthManager = GameObject.Find("HealthSlider").GetComponent<HealthManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -24,6 +25,8 @@ public class BeetleNPC : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             this.hasReachedThePlayer = true;
+            this.healthManager.ReduceHealth();
+
             if (!this.cherryHit)
             {
                 BeetlePatrol.isAttacking = true;

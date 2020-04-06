@@ -13,6 +13,7 @@ public class CherryControl : MonoBehaviour
     {
         this.player = GameObject.FindGameObjectWithTag("Player");
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))

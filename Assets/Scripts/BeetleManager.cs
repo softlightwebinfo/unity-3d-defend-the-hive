@@ -5,26 +5,21 @@ using UnityEngine.UI;
 public class BeetleManager : MonoBehaviour
 {
     private string m_tag = "Beetle";
-    public int currentBeetleCount = 0;
+    public static int currentBeetleCount = 0;
     Text beetleTextCount;
     public GameObject[] beetles;
 
     private void Awake()
     {
         this.beetleTextCount = GetComponent<Text>();
-        this.currentBeetleCount = 0;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
+        currentBeetleCount = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
         this.beetles = GameObject.FindGameObjectsWithTag(this.m_tag);
-        this.currentBeetleCount = this.beetles.Length;
-        this.beetleTextCount.text = this.currentBeetleCount.ToString();
+        currentBeetleCount = this.beetles.Length;
+        this.beetleTextCount.text = currentBeetleCount.ToString();
     }
 }

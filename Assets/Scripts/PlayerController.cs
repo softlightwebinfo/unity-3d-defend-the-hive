@@ -140,7 +140,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Comprobamos si nos hemos quedado sin vidas para hacer la animación de la muerte       
+        //Comprobamos si nos hemos quedado sin vidas para hacer la animación de la muerte
+        if (PlayerManager.liveRemaining == 0)
+        {
+            this.m_Animator.Play("CM_Die");
+        }
     }
 
     void StopMotion()
