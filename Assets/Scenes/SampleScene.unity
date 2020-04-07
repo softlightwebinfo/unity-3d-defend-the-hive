@@ -12698,6 +12698,10 @@ PrefabInstance:
       propertyPath: m_Cam
       value: 
       objectReference: {fileID: 720714730}
+    - target: {fileID: 1759507540, guid: de245888609cc8249b2e3cc682626634, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 49
+      objectReference: {fileID: 0}
     - target: {fileID: 1992261083327458, guid: de245888609cc8249b2e3cc682626634, type: 3}
       propertyPath: m_Name
       value: CucumberMan

@@ -13,11 +13,18 @@ public class BeetleNPC : MonoBehaviour
     public float smoothTime = 3.0f;
     public Vector3 smoothVelocity = Vector3.zero;
     public HealthManager healthManager;
+    public static BeetleManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
         this.m_Animator = GetComponent<Animator>();
         this.healthManager = GameObject.Find("HealthSlider").GetComponent<HealthManager>();
+        if (!manager)
+        {
+            manager = GameObject.Find("BeetlesValue").GetComponent<BeetleManager>();
+        }
+        manager.RecalculateBeetles();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -57,6 +64,7 @@ public class BeetleNPC : MonoBehaviour
         this.m_Animator.Play("Die_OnGround");
         Destroy(this.gameObject, 2.0f);
         this.hasReachedThePlayer = false;
+        manager.RecalculateBeetles();
     }
 
     IEnumerator DestroyBeetleStanding()
@@ -66,6 +74,7 @@ public class BeetleNPC : MonoBehaviour
         Destroy(this.gameObject, 2.0f);
         this.cherryHit = false;
         this.hasReachedThePlayer = false;
+        manager.RecalculateBeetles();
     }
 
     private void OnTriggerEnter(Collider other)

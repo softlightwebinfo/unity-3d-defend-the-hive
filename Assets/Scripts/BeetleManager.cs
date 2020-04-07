@@ -13,10 +13,10 @@ public class BeetleManager : MonoBehaviour
     {
         this.beetleTextCount = GetComponent<Text>();
         currentBeetleCount = 1;
+        this.RecalculateBeetles();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RecalculateBeetles()
     {
         this.beetles = GameObject.FindGameObjectsWithTag(this.m_tag);
         currentBeetleCount = this.beetles.Length;
