@@ -96,14 +96,12 @@ public class NewPlayerMotor : MonoBehaviour
             m_Move = v * Vector3.forward + h * Vector3.right;
         }
 
-        Move(m_Move);
         // pass all parameters to the character control script
-        /*
+
         if (PlayerManager.hasDead == false)
         {
             Move(m_Move);
         }
-        */
     }
 
     public void Move(Vector3 move)

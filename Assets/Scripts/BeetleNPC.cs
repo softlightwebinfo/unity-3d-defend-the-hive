@@ -80,6 +80,7 @@ public class BeetleNPC : MonoBehaviour
 
         if (other.gameObject.CompareTag("Cherry"))
         {
+            print("Entry");
             BeetlePatrol.isAttacking = true;
             this.cherryHit = true;
             this.m_Animator.Play("Stand");

@@ -9,6 +9,7 @@ TagManager:
   - CherryTree
   - Cucumber
   - Beetle
+  - SpawnZone
   layers:
   - Default
   - TransparentFX

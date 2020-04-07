@@ -17,7 +17,7 @@ public class HealthManager : MonoBehaviour
 
     public void ReduceHealth()
     {
-        currentHealth--;
+        currentHealth -= 50f;
         this.healthBar.value = currentHealth;
     }
 

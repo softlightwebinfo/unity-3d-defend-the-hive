@@ -16,11 +16,14 @@ public class CherryControl : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+        if (Time.timeScale > 0)
         {
-            if (PlayerManager.currentCherryCount > 0)
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
             {
-                this.ThrowCherry();
+                if (PlayerManager.currentCherryCount > 0)
+                {
+                    this.ThrowCherry();
+                }
             }
         }
     }
@@ -28,18 +31,18 @@ public class CherryControl : MonoBehaviour
     void ThrowCherry()
     {
         Ray cameraToWorldRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit m_hit = new RaycastHit();
-        if (Physics.Raycast(cameraToWorldRay, out m_hit))
+        RaycastHit hit = new RaycastHit();
+        if (Physics.Raycast(cameraToWorldRay, out hit))
         {
-            Vector3 directionToFire = m_hit.point - this.transform.position;
-
-            Rigidbody cherryClone = (Rigidbody)Instantiate(this.m_rigibody, this.transform.position, this.transform.rotation);
+            Debug.DrawLine(transform.position, hit.point);
+            Vector3 directionToFire = hit.point - this.transform.position;
+            Rigidbody cherryClone = (Rigidbody)Instantiate(this.m_rigibody, transform.position,
+                                                           transform.rotation);
             cherryClone.useGravity = true;
             cherryClone.constraints = RigidbodyConstraints.None;
-            cherryClone.AddForce(directionToFire.normalized * this.throwDistance);
-            Destroy(cherryClone.gameObject, this.timeToDestroy);
-            PlayerManager.currentCherryCount--;
+            cherryClone.AddForce(directionToFire.normalized * throwDistance);
+            Destroy(cherryClone.gameObject, timeToDestroy);
+            PlayerManager.currentCherryCount -= 1;
         }
     }
 }

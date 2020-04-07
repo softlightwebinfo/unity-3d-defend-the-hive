@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public string idleState, walkState, runState, jumpState, throwState, dieState;
-    bool isWalking, isRunning, isJumping, isIdle, forward, backward, left, right;
+    bool isWalking, isRunning, isIdle, forward, backward, left, right;
     Animator m_Animator;
 
     public AudioClip jumpClip, throwClip;

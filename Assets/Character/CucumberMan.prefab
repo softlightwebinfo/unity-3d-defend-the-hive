@@ -1973,6 +1973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempCurrentCherryCount: 0
   isCollectingCherries: 0
+  spawningZones: []
 --- !u!114 &1245828853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2102,6 +2103,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 54168374023947622, guid: 9f4227fde136c49bcbd0c551a0ba1970,
         type: 3}
+    - target: {fileID: 5768692301484469188, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_rigibody
+      value: 
+      objectReference: {fileID: 54168374023947622, guid: 9f4227fde136c49bcbd0c551a0ba1970,
+        type: 3}
+    - target: {fileID: 5768692301484469188, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: throwDistance
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927699528728073512, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927699528728073512, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.098
+      objectReference: {fileID: 0}
     - target: {fileID: 7946047883204202202, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
         type: 3}
       propertyPath: m_Enabled
@@ -2116,6 +2138,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.8936789
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.8604016
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.411493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.04638354
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997411551626538646, guid: 6ed6e263dcb1045c5987d792bdbe8b5c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.022806559
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ed6e263dcb1045c5987d792bdbe8b5c, type: 3}
